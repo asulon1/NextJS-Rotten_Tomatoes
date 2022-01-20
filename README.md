@@ -5,7 +5,7 @@ The app is built with Nextjs and is written in JavaScript
 
 ## Requirements
 
-Step 1 : Create a TMDB account (https://www.themoviedb.org/). Once done go to the SETTING page, then Click on "API" and create your project to generate your own API Key.
+Step 1 : Create a TMDB account (https://www.themoviedb.org/). Once done go to the SETTING page, then Click on "API" and create your project to generate your own API Key. /n
 
 Step 2.1 : Create a firebase project (https://firebase.google.com/). Open the Setting of your project, get your SDK configuration and add it in firebase.js file.
 Step 2.2 : In Authentifacation page, add Google in Login providers.
