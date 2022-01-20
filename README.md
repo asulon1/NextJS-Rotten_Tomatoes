@@ -35,6 +35,8 @@ npm run dev
 # or
 yarn start
 ```
-##
+## Authors
+- [GABILLOUX Jérôme](https://github.com/jgabilloux)
+- [PEREIRA-VARELA Jessy](https://github.com/Jessy06)
+- [SULON Adrien](https://github.com/asulon1)
 
-GABILLOUX Jérôme | PEREIRA-VARELA Jessy | SULON Adrien 
