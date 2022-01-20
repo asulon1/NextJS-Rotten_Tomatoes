@@ -18,6 +18,13 @@ Step 2.3 : In https://console.cloud.google.com/apis/credentials/oauthclient/ Add
 
 Finally Copy your Client ID / Secret client ID And your API KEY and paste it in .env.exemple, your may rename the file as ".env.local"
 
+
+#### Feed
+
+<p align="center">
+  <img src=".github/Home.png" width="40%;" />
+</p>
+
 ## Start the app
 
 Install all packages :
