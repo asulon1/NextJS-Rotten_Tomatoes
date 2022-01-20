@@ -35,3 +35,6 @@ npm run dev
 # or
 yarn start
 ```
+##
+
+GABILLOUX Jérôme | PEREIRA-VARELA Jessy | SULON Adrien 
