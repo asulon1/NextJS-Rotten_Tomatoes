@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## My Rotten Tomatoes
 
-## Getting Started
+My Rotten Tomatoes is an EPITECH school project, the goal is to create a web app based on the The Movie DataBase API (TMDB).
+The app is built with Nextjs and is written in JavaScript
 
-First, run the development server:
+## Requirements
+
+Step 1 : Create a TMDB account (https://www.themoviedb.org/). Once done go to the SETTING page, then Click on "API" and create your project to generate your own API Key.
+
+Step 2.1 : Create a firebase project (https://firebase.google.com/). Open the Setting of your project, get your SDK configuration and add it in firebase.js file.
+Step 2.2 : In Authentifacation page, add Google in Login providers.
+Step 2.3 : In https://console.cloud.google.com/apis/credentials/oauthclient/ Add "http://localhost:3000" & "http://localhost:3000/api/auth/callback/google" as below
+
+![image](https://user-images.githubusercontent.com/91874974/150341079-c0ffbe57-27f0-4f91-895e-a6e842ef288a.png)
+
+Finally Copy your Client ID / Secret client ID And your API KEY and paste it in .env.exemple, your may rename the file as ".env.local"
+
+## Start the app
+
+Install all packages :
+
+```bash
+npm install
+# or
+yarn
+```
+
+Run the app :
 
 ```bash
 npm run dev
 # or
-yarn dev
+yarn start
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
