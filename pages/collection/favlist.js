@@ -1,19 +1,19 @@
+/* eslint-disable react/jsx-key */
 import Head from "next/head";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Header from "../../components/Header";
 import Nav from "../../components/Nav";
 import { ThumbUpIcon } from "@heroicons/react/outline";
 import FlipMove from "react-flip-move";
 import { useRouter } from "next/router";
 
-function favlist() {
+function Favlist() {
   const cart = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
+
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
   const router = useRouter();
   console.log(cart);
-
 
   return (
     <div className="relative">
@@ -25,7 +25,7 @@ function favlist() {
 
       <div>
         {cart.length === 0 ? (
-          <h1> Favorite list vide </h1>
+          <h1> </h1>
         ) : (
           <>
             {cart.map((item) => (
@@ -38,6 +38,7 @@ function favlist() {
                   className="p-2 group cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50"
                 >
                   <Image
+                    alt=""
                     layout="responsive"
                     src={
                       `${BASE_URL}${item.backdrop_path || item.poster_path}` ||
@@ -68,4 +69,4 @@ function favlist() {
   );
 }
 
-export default favlist;
+export default Favlist;

@@ -1,14 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import Header from "../../components/Header";
 import Head from "next/head";
 import Image from "next/image";
 import Nav from "../../components/Nav";
-import { useState, useEffect } from "react";
-import { HeartIcon, XIcon, PlayIcon } from "@heroicons/react/solid";
+import { useState } from "react";
+import { HeartIcon, XIcon} from "@heroicons/react/solid";
 import ReactPlayer from "react-player/lazy";
-import CommentsButton from "../../components/Comments/CommentsButton";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cart.slice";
-import Comments from '../../components/Comments/Comments'
+
 function Movie({ result }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
   const [showPlayer, setShowPlayer] = useState(false);
@@ -28,6 +28,7 @@ function Movie({ result }) {
       <section className="relative z-50">
         <div className="relative min-h-[calc(100vh-72px)]">
           <Image
+            alt=""
             src={
               `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
               `${BASE_URL}${result.poster_path}`
@@ -41,17 +42,6 @@ function Movie({ result }) {
             {result.title || result.original_name}
           </h1>
           <div className="flex items-center space-x-3 md:space-x-5">
-            {/* <button className="text-xs md:text-base bg-[#f9f9f9] text-black flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]">
-                        <img
-                        src="rotten_tomatoes\public\play-icon-black.svg"
-                        alt=""
-                        className="h-6 md:h-8"
-                        />
-                        <span className="uppercase font-medium tracking-wide">
-                            Play
-                        </span>
-                    </button> */}
-
             <button
               className="text-xs md:text-base bg-black/30 text-[#f9f9f9] border border-[#f9f9f9] flex items-center justify-center py-2.5 px-6 rounded hover:bg-[#c6c6c6]"
               onClick={() => setShowPlayer(true)}
@@ -71,10 +61,6 @@ function Movie({ result }) {
                 <HeartIcon className="w-5 h-5 m-auto mt-1" />
               </button>
             </div>
-
-            {/* <div className="rounded-full border-2 border-white flec items-center justify-center w-11 h-11 cursor-pointer bg-black/60">
-                        <img src="./public/group-icon.svg" alt="" />
-                    </div> */}
           </div>
 
           <p className="text-xs md:text-sm">
@@ -115,10 +101,6 @@ function Movie({ result }) {
           </div>
         </div>
       </section>
-      {/* <CommentsButton /> */}
-      <div>
-        <Comments />
-      </div>
     </div>
   );
 }

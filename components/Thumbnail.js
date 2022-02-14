@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import Image from "next/image";
 import { ThumbUpIcon } from "@heroicons/react/outline";
 import { forwardRef } from "react";
@@ -13,6 +14,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
       onClick={() => router.push(`/movie/${result.id}`)}
     >
       <Image
+      alt=""
         layout="responsive"
         src={
           `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
